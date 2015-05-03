@@ -59,6 +59,7 @@ executable minesweeper
   -- Other library packages from which modules are imported.
   build-depends: base >=4.7 && < 5.0
                , containers
+               , array
                , tasty >= 0.10.0.2
                , tasty-smallcheck  >= 0.8
                , tasty-quickcheck  >= 0.8.2
@@ -76,6 +77,7 @@ test-suite tests
   type: exitcode-stdio-1.0
   build-depends: base >= 4.7 && < 5.0
                , containers
+               , array
                , tasty >= 0.10.0.2
                , tasty-smallcheck  >= 0.8
                , tasty-quickcheck  >= 0.8.2

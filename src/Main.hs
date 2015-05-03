@@ -1,4 +1,7 @@
 module Main where
 
+import Data
+
 main :: IO ()
-main = return ()
+main = let gameBoard1  = unlines ["---" ,"-x-" ,"---"]
+       in putStrLn . printArray . dangerBoard $ readGameBoard gameBoard1
