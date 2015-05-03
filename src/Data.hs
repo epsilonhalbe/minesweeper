@@ -13,8 +13,8 @@ instance Show Bomb where
 data Danger = Level Int | Infinity deriving (Eq)
 
 instance Show Danger where 
-  show (Level n) = show n
-  show (Infinity) = "B"--"💣"
+  show (Level n) = if n == 0 then " " else show n
+  show (Infinity) = "💣"
 
 data GameBoard = GameBoard { get :: M.Map (Int,Int) Bomb, row :: Int, col :: Int}
                deriving (Eq,Show)
