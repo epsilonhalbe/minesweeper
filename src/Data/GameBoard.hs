@@ -19,6 +19,7 @@ instance Show Danger where
 data GameBoard = GameBoard { get :: M.Map (Int,Int) Bomb, row :: Int, col :: Int}
                deriving (Eq,Show)
 
+
 readGameBoard :: String -> GameBoard
 readGameBoard str = let board = lines str
                         cols  = length $ head board
@@ -29,4 +30,5 @@ readGameBoard str = let board = lines str
 
 index :: Int -> Int -> [(Int,Int)]
 index r c = A.range ((1,1),(r,c))
+
 
