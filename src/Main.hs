@@ -1,7 +1,9 @@
 module Main where
 
 import Data
+import Control.Applicative ((<$>))
+import System.Environment (getArgs)
 
 main :: IO ()
-main = let gameBoard1  = unlines ["---" ,"-x-" ,"---"]
-       in putStrLn . printArray . dangerBoard $ readGameBoard gameBoard1
+main = do let gb = genBoard 10
+          putStrLn . printArray . dangerBoard $ gb
