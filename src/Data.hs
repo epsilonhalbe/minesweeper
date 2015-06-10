@@ -52,4 +52,3 @@ replicateM = replicateM' M.empty
                   then replicateM' acc n kGen vGen
                   else replicateM' (M.insert k v acc) (n-1) kGen vGen
 
-clickBoa
